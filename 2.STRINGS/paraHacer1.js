@@ -80,24 +80,20 @@ console.log(countNoSpaces(myString4))
 
 
 // Quitar cadenas mas cortas
-let myString5 = "Amor, me estás volviendo loca"
- 
-function cutString(str, num){
+myArray = ["perro","gato","lagartija","sapo","pez","ave"]
+
+function cutStrings(arr, num){
     
-    let splited = str.split(" ")
+    let cutted = []
     
-    let cuted = []
-    
-    for(i of splited){
-        if(i.length > num){
-            cuted.push(i)
+    for(let i of arr){
+        if(i.length >= num){
+            cutted.push(i)
         }
     }
     
-    toReturn = cuted.join(" ")
-    
-    return toReturn
-    
+    return cutted
 }
 
-console.log(cutString(myString5, 2))
+
+console.log(cutStrings(myArray, 5))
