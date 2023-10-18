@@ -79,3 +79,6 @@ function balance(arr){
 } 
 
 balance(myArray3)
+
+
+// SIN AYUDA DE SAINT GPT !!!!
