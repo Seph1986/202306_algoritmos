@@ -44,7 +44,7 @@ class SLL{
         let value = rNode(myHead,myCount)
         return value
     }
-}
+}3045083
 
 let myLL = new SLL()
 
@@ -94,3 +94,37 @@ console.log(maxGrapes(myArray))
 
 // COLLATZ-APALOOZA
 
+function collatz(num){
+    
+    if(num < 0) return null
+    let myNumber = Math.trunc(num)
+    
+    const rCollatz = (num, count=0)=>{
+        
+        let rNum = num
+        let rCount = count
+        
+        // BASE CASE
+        if(rNum === 1){
+            return rCount
+        }
+        // RECURSIVE CALL
+        else if(rNum % 2 === 0){
+            rCount ++
+            return rCollatz((rNum / 2), rCount)
+        }
+        else{
+            rCount ++
+            return rCollatz((3 * rNum) +1)
+        }
+    }
+    
+    let count = rCollatz(myNumber)
+    return count
+}
+
+console.log(collatz(1))
+
+
+// PALABRAS TELEFÓNICAS
+//** sin terminar, este ejercicio supero mi lógica, me derroto por ahora **//
